@@ -12,6 +12,10 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Bonjour et bienvenue sur notre serveur !");
+});
+
 app.post("/auth", (req, res) => {
   const { login, password } = req.body;
 
